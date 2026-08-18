@@ -1,0 +1,892 @@
+/* ==============================
+   GENERAL
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eeeae2;
+    color:#302525;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   NAVBAR
+================================= */
+
+nav{
+    width:100%;
+    background:#48191b;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d6ad54;
+}
+
+
+/* ==============================
+   PORTADA
+================================= */
+
+.portada{
+    min-height:480px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:
+    linear-gradient(
+        rgba(238,234,226,.93),
+        rgba(238,234,226,.93)
+    );
+
+    border-bottom:1px solid #d4c9b8;
+}
+
+.portada .small{
+    color:#8b765c;
+    font-size:17px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.portada h1{
+    font-family:Georgia,serif;
+    color:#48191b;
+    font-size:78px;
+    letter-spacing:10px;
+    line-height:1;
+}
+
+.portada h2{
+    font-family:Georgia,serif;
+    color:#625555;
+    font-size:29px;
+    font-weight:normal;
+    font-style:italic;
+    margin-top:20px;
+}
+
+.linea{
+    width:90px;
+    height:3px;
+    background:#d6ad54;
+    margin:28px auto;
+}
+
+.portada p{
+    font-family:Georgia,serif;
+    color:#6d6260;
+    font-size:19px;
+}
+
+
+/* ==============================
+   YEARBOOK
+================================= */
+
+.yearbook{
+    max-width:1450px;
+    margin:auto;
+    padding:70px 50px;
+}
+
+.yearbook-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:43px;
+    color:#48191b;
+}
+
+.yearbook-subtitle{
+    text-align:center;
+    color:#716766;
+    margin-top:12px;
+    margin-bottom:50px;
+}
+
+
+/* ==============================
+   GRID
+================================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+
+/* ==============================
+   TARJETAS
+================================= */
+
+.card{
+    background:#faf8f4;
+    padding:12px 12px 25px;
+
+    border:1px solid #d5cdc1;
+
+    box-shadow:
+        0 5px 15px rgba(50,30,30,.12);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 15px 30px rgba(50,30,30,.2);
+}
+
+
+/* ==============================
+   FOTO
+================================= */
+
+.card img{
+    width:100%;
+    height:290px;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* ==============================
+   NOMBRE
+================================= */
+
+.card h3{
+    text-align:center;
+    margin-top:17px;
+
+    color:#48191b;
+
+    font-family:Georgia,serif;
+    font-size:21px;
+}
+
+
+/* ==============================
+   FRASE
+================================= */
+
+.card p{
+    text-align:center;
+
+    margin-top:10px;
+
+    padding:0 8px;
+
+    color:#665a59;
+
+    font-family:Georgia,serif;
+    font-style:italic;
+
+    font-size:16px;
+    line-height:23px;
+}
+
+
+/* ==============================
+   DECORACIÓN
+================================= */
+
+.decoracion{
+    text-align:center;
+    color:#d0a74d;
+    font-size:20px;
+    margin-top:10px;
+}
+
+
+/* ==============================
+   FINAL
+================================= */
+
+.final{
+    background:#48191b;
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+}
+
+.final h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+}
+
+.final p{
+    margin-top:15px;
+
+    font-family:Georgia,serif;
+    font-style:italic;
+
+    font-size:20px;
+    color:#e4d6c0;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer{
+    background:#211919;
+    color:#ddd;
+
+    text-align:center;
+
+    padding:22px;
+
+    font-size:14px;
+}
+
+
+/* ==============================
+   TABLET
+================================= */
+
+@media(max-width:1100px){
+
+    .grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .portada h1{
+        font-size:60px;
+    }
+
+}
+
+
+/* ==============================
+   CELULAR
+================================= */
+
+@media(max-width:750px){
+
+    nav{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .yearbook{
+        padding:50px 20px;
+    }
+
+    .portada h1{
+        font-size:43px;
+        letter-spacing:5px;
+    }
+
+    .portada h2{
+        font-size:23px;
+    }
+
+}
+
+
+/* ==============================
+   CELULAR PEQUEÑO
+================================= */
+
+@media(max-width:500px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:350px;
+    }
+
+    .yearbook-title{
+        font-size:34px;
+    }
+
+}
+
+/* ==============================
+   HISTORIA
+================================= */
+
+.historia-portada{
+    min-height:400px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:#eeeae2;
+
+    border-bottom:1px solid #d4c9b8;
+}
+
+.historia-small{
+    color:#8b765c;
+    font-size:16px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.historia-portada h1{
+    font-family:Georgia,serif;
+    color:#48191b;
+    font-size:65px;
+}
+
+.historia-portada > p:last-child{
+    font-family:Georgia,serif;
+    color:#6d6260;
+    font-size:19px;
+}
+
+
+/* ==============================
+   SECCIONES
+================================= */
+
+.historia-seccion{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 40px;
+}
+
+.historia-seccion h2{
+    text-align:center;
+    font-family:Georgia,serif;
+    color:#48191b;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.historia-texto{
+    max-width:900px;
+    margin:20px auto;
+    text-align:center;
+
+    color:#665a59;
+
+    font-family:Georgia,serif;
+    font-size:18px;
+    line-height:30px;
+}
+
+.historia-subtitulo{
+    text-align:center;
+    color:#716766;
+    margin-bottom:45px;
+}
+
+
+/* ==============================
+   TIMELINE
+================================= */
+
+.timeline{
+    max-width:900px;
+    margin:50px auto 0;
+
+    border-left:3px solid #d6ad54;
+    padding-left:40px;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:45px;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+
+    width:14px;
+    height:14px;
+
+    background:#d6ad54;
+
+    border-radius:50%;
+
+    left:-49px;
+    top:5px;
+}
+
+.timeline-year{
+    color:#d0a74d;
+
+    font-family:Georgia,serif;
+
+    font-size:22px;
+    font-weight:bold;
+
+    margin-bottom:8px;
+}
+
+.timeline-content{
+    background:#faf8f4;
+
+    padding:22px;
+
+    border:1px solid #d5cdc1;
+
+    box-shadow:0 5px 15px rgba(50,30,30,.08);
+}
+
+.timeline-content h3{
+    color:#48191b;
+
+    font-family:Georgia,serif;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.timeline-content p{
+    color:#665a59;
+
+    line-height:25px;
+}
+
+
+/* ==============================
+   MOMENTOS
+================================= */
+
+.momentos-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.momento-card{
+    background:#faf8f4;
+
+    padding:12px 12px 25px;
+
+    border:1px solid #d5cdc1;
+
+    box-shadow:0 5px 15px rgba(50,30,30,.12);
+}
+
+.momento-card img{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.momento-card h3{
+    color:#48191b;
+
+    font-family:Georgia,serif;
+
+    text-align:center;
+
+    margin-top:18px;
+}
+
+.momento-card p{
+    color:#665a59;
+
+    text-align:center;
+
+    margin-top:10px;
+
+    line-height:23px;
+}
+
+
+/* ==============================
+   DATOS
+================================= */
+
+.datos-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.dato-card{
+    background:#faf8f4;
+
+    border:1px solid #d5cdc1;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(50,30,30,.08);
+
+    transition:.3s;
+}
+
+.dato-card:hover{
+    transform:translateY(-5px);
+}
+
+.dato-card span{
+    color:#d0a74d;
+    font-size:22px;
+}
+
+.dato-card h3{
+    color:#48191b;
+
+    font-family:Georgia,serif;
+
+    margin:12px 0;
+}
+
+.dato-card p{
+    color:#665a59;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:17px;
+}
+
+
+/* ==============================
+   ANTES Y AHORA
+================================= */
+
+.antes-ahora-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.comparacion{
+    background:#faf8f4;
+
+    padding:15px 15px 25px;
+
+    border:1px solid #d5cdc1;
+
+    box-shadow:0 5px 15px rgba(50,30,30,.1);
+
+    text-align:center;
+}
+
+.comparacion h3{
+    color:#48191b;
+
+    font-family:Georgia,serif;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.comparacion img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.comparacion p{
+    color:#665a59;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    margin-top:15px;
+}
+
+
+/* ==============================
+   RECUERDOS
+================================= */
+
+.recuerdos{
+    max-width:950px;
+}
+
+.recuerdo{
+    display:flex;
+
+    gap:30px;
+
+    align-items:center;
+
+    padding:30px 0;
+
+    border-bottom:1px solid #d5cdc1;
+}
+
+.recuerdo-numero{
+    color:#d0a74d;
+
+    font-family:Georgia,serif;
+
+    font-size:35px;
+
+    font-weight:bold;
+
+    min-width:70px;
+}
+
+.recuerdo h3{
+    color:#48191b;
+
+    font-family:Georgia,serif;
+
+    font-size:24px;
+
+    margin-bottom:8px;
+}
+
+.recuerdo p{
+    color:#665a59;
+
+    line-height:25px;
+}
+
+
+/* ==============================
+   FINAL HISTORIA
+================================= */
+
+.historia-final{
+    background:#48191b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 25px;
+}
+
+.historia-final h2{
+    font-family:Georgia,serif;
+
+    font-size:42px;
+}
+
+.historia-final > p{
+    max-width:800px;
+
+    margin:25px auto;
+
+    color:#e4d6c0;
+
+    font-family:Georgia,serif;
+
+    font-size:19px;
+
+    line-height:30px;
+}
+
+.historia-final h3{
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:normal;
+}
+
+.frase-final{
+    font-style:italic;
+}
+
+
+/* ==============================
+   RESPONSIVE HISTORIA
+================================= */
+
+@media(max-width:900px){
+
+    .momentos-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .datos-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .historia-portada h1{
+        font-size:43px;
+    }
+
+    .historia-seccion{
+        padding:50px 20px;
+    }
+
+    .momentos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .datos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .antes-ahora-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline{
+        padding-left:25px;
+    }
+
+    .timeline-item::before{
+        left:-34px;
+    }
+
+    .recuerdo{
+        gap:15px;
+    }
+
+    .recuerdo-numero{
+        min-width:45px;
+        font-size:27px;
+    }
+
+}
+
+/* ==============================
+   GALERÍA
+================================= */
+
+.pagina{
+    max-width:1450px;
+    margin:auto;
+    padding:70px 50px;
+}
+
+.pagina h1{
+    text-align:center;
+    font-family:Georgia,serif;
+    color:#48191b;
+    font-size:43px;
+    margin-bottom:15px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+.galeria img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+
+    border:8px solid #faf8f4;
+
+    box-shadow:0 5px 15px rgba(50,30,30,.15);
+
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 25px rgba(50,30,30,.25);
+}
+
+
+/* ==============================
+   GALERÍA - TABLET
+================================= */
+
+@media(max-width:900px){
+
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* ==============================
+   GALERÍA - CELULAR
+================================= */
+
+@media(max-width:600px){
+
+    .pagina{
+        padding:50px 20px;
+    }
+
+    .pagina h1{
+        font-size:36px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    .galeria img{
+        height:350px;
+    }
+
+}
